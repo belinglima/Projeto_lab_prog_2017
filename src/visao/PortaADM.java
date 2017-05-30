@@ -41,12 +41,12 @@ public class PortaADM extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario: ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 170, 50, 15);
+        jLabel2.setBounds(110, 170, 70, 15);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Senha:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(110, 220, 50, 20);
+        jLabel3.setBounds(110, 220, 70, 20);
 
         jButtonAcessar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonAcessar.setText("ENTRAR");
@@ -95,9 +95,9 @@ public class PortaADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcessarActionPerformed
-    TelaPrincipal tela = new TelaPrincipal();
-    tela.setVisible(true);
-    dispose();
+        TelaPrincipal tela = new TelaPrincipal();
+        tela.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jButtonAcessarActionPerformed
 
     /**
