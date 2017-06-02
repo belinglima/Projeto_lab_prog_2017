@@ -4,18 +4,21 @@
  * and open the template in the editor.
  */
 package visao;
-
+import javax.swing.JDialog;
 /**
  *
  * @author Familia-Lima
  */
 public class PortaADM extends javax.swing.JFrame {
-
+    BancoDeDados database;
     /**
      * Creates new form PortaADM
      */
     public PortaADM() {
+        this.database = new BancoDeDados();
+        database.configurar_connection("root", "atbiotec2013", "porta");
         initComponents();
+        
     }
 
     /**
@@ -41,7 +44,7 @@ public class PortaADM extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario: ");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(110, 170, 70, 15);
+        jLabel2.setBounds(110, 170, 70, 17);
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Senha:");
@@ -50,6 +53,11 @@ public class PortaADM extends javax.swing.JFrame {
 
         jButtonAcessar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonAcessar.setText("ENTRAR");
+        jButtonAcessar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButtonAcessarMouseClicked(evt);
+            }
+        });
         jButtonAcessar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonAcessarActionPerformed(evt);
@@ -95,10 +103,23 @@ public class PortaADM extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButtonAcessarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAcessarActionPerformed
+        
         TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
-        dispose();
+        
+        if (database.checarUsuario(jTextField1.getText(), jPasswordField1.getText())){
+        
+             tela.setVisible(true);
+                dispose();
+            
+        };
+        
     }//GEN-LAST:event_jButtonAcessarActionPerformed
+
+    private void jButtonAcessarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonAcessarMouseClicked
+       
+        
+        
+    }//GEN-LAST:event_jButtonAcessarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -144,4 +165,8 @@ public class PortaADM extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    private JDialog JDialog() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
