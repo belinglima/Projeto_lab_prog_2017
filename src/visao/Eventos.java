@@ -5,6 +5,9 @@
  */
 package visao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.DefaultListModel;
 import visao.TelaPrincipal;
 
 /**
@@ -18,6 +21,7 @@ public class Eventos extends javax.swing.JFrame {
      */
     public Eventos() {
         initComponents();
+        Atualizar.doClick();
     }
 
     /**
@@ -29,35 +33,97 @@ public class Eventos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonVoltar = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Eventos = new javax.swing.JList<>();
+        Atualizar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButtonVoltar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButtonVoltar.setText("VOLTAR");
-        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+        Voltar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Voltar.setForeground(new java.awt.Color(0, 0, 0));
+        Voltar.setText("VOLTAR");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVoltarActionPerformed(evt);
+                VoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonVoltar);
-        jButtonVoltar.setBounds(170, 390, 130, 40);
+        getContentPane().add(Voltar);
+        Voltar.setBounds(280, 390, 130, 40);
+
+        Eventos.setFont(new java.awt.Font("Arial Black", 3, 12)); // NOI18N
+        Eventos.setForeground(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setViewportView(Eventos);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(60, 70, 350, 300);
+
+        Atualizar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Atualizar.setForeground(new java.awt.Color(0, 0, 0));
+        Atualizar.setText("ATUALIZAR");
+        Atualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AtualizarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Atualizar);
+        Atualizar.setBounds(60, 390, 130, 40);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(410, 430, 50, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 470, 490);
+        jLabel1.setBounds(0, 0, 470, 510);
 
         setSize(new java.awt.Dimension(487, 537));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         TelaPrincipal voltar=new TelaPrincipal();
         voltar.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButtonVoltarActionPerformed
+    }//GEN-LAST:event_VoltarActionPerformed
+
+    private void AtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtualizarActionPerformed
+        
+        BancoDeDados database = new BancoDeDados();
+        database.configurar_connection("root","atbiotec2013","porta");
+        DefaultListModel dataModel = new DefaultListModel();
+           
+        String linha_dados = new String();
+           
+           try {
+               
+                ResultSet resultados = database.buscarEventos();
+                
+                while (resultados.next()) {
+                    
+                    linha_dados = String.valueOf(resultados.getString("id"));
+                    linha_dados += " - ";
+                    linha_dados += String.valueOf(resultados.getString("nome"));
+                    linha_dados += " - ";
+                    linha_dados += String.valueOf(resultados.getString("instituicao"));
+                    dataModel.addElement(linha_dados);
+                                  
+                    
+                }
+               
+           } catch (SQLException exception) {
+               
+               System.out.println("Zikou");
+               
+           }
+
+           Eventos.setModel(dataModel);  
+           Eventos.repaint();
+        
+    }//GEN-LAST:event_AtualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,7 +162,11 @@ public class Eventos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonVoltar;
+    private javax.swing.JButton Atualizar;
+    private javax.swing.JList<String> Eventos;
+    private javax.swing.JButton Voltar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

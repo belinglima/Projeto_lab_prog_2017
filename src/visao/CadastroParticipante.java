@@ -5,6 +5,8 @@
  */
 package visao;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Familia-Lima
@@ -32,13 +34,14 @@ public class CadastroParticipante extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextFieldNome = new javax.swing.JTextField();
-        jTextFieldCpf = new javax.swing.JTextField();
-        jTextFieldEmail = new javax.swing.JTextField();
-        jTextFieldTelefone = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jCheckBox1 = new javax.swing.JCheckBox();
+        Nome = new javax.swing.JTextField();
+        CPF = new javax.swing.JTextField();
+        Email = new javax.swing.JTextField();
+        Telefone = new javax.swing.JTextField();
+        Salvar = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
+        Termos = new javax.swing.JCheckBox();
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -48,128 +51,151 @@ public class CadastroParticipante extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("CPF");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(200, 180, 60, 30);
+        jLabel4.setBounds(190, 140, 60, 30);
 
         jLabel3.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(200, 120, 60, 30);
+        jLabel3.setBounds(190, 60, 60, 30);
 
         jLabel2.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cadastro de Participante");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(130, 80, 240, 50);
+        jLabel2.setBounds(130, 20, 240, 50);
 
         jLabel5.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("E-MAIL");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(200, 240, 60, 30);
+        jLabel5.setBounds(190, 220, 60, 30);
 
         jLabel6.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Telefone:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(200, 300, 60, 30);
+        jLabel6.setBounds(190, 300, 60, 30);
 
-        jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
+        Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldNomeActionPerformed(evt);
+                NomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldNome);
-        jTextFieldNome.setBounds(110, 149, 250, 30);
+        getContentPane().add(Nome);
+        Nome.setBounds(110, 90, 250, 30);
 
-        jTextFieldCpf.addActionListener(new java.awt.event.ActionListener() {
+        CPF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldCpfActionPerformed(evt);
+                CPFActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldCpf);
-        jTextFieldCpf.setBounds(110, 210, 250, 30);
+        getContentPane().add(CPF);
+        CPF.setBounds(110, 170, 250, 30);
 
-        jTextFieldEmail.addActionListener(new java.awt.event.ActionListener() {
+        Email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldEmailActionPerformed(evt);
+                EmailActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldEmail);
-        jTextFieldEmail.setBounds(110, 270, 250, 30);
+        getContentPane().add(Email);
+        Email.setBounds(110, 250, 250, 30);
 
-        jTextFieldTelefone.addActionListener(new java.awt.event.ActionListener() {
+        Telefone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTelefoneActionPerformed(evt);
+                TelefoneActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldTelefone);
-        jTextFieldTelefone.setBounds(110, 330, 250, 30);
+        getContentPane().add(Telefone);
+        Telefone.setBounds(110, 330, 250, 30);
 
-        jButton1.setText("SALVAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Salvar.setText("SALVAR");
+        Salvar.setVisible(false);
+        Salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(110, 420, 120, 50);
+        getContentPane().add(Salvar);
+        Salvar.setBounds(110, 420, 120, 50);
 
-        jButton2.setText("SAIR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Sair.setText("SAIR");
+        Sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                SairActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(240, 420, 120, 50);
+        getContentPane().add(Sair);
+        Sair.setBounds(240, 420, 120, 50);
 
-        jCheckBox1.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBox1.setText("Aceito os termos de uso e privacidade.");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        Termos.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Termos.setForeground(new java.awt.Color(255, 255, 255));
+        Termos.setText("Aceito os termos de uso e privacidade.");
+        Termos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                TermosActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBox1);
-        jCheckBox1.setBounds(110, 380, 250, 30);
+        getContentPane().add(Termos);
+        Termos.setBounds(110, 380, 250, 30);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(410, 430, 50, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, -20, 490, 530);
+        jLabel1.setBounds(0, -20, 490, 540);
 
         setSize(new java.awt.Dimension(488, 532));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCpfActionPerformed
+    private void CPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CPFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldCpfActionPerformed
+    }//GEN-LAST:event_CPFActionPerformed
 
-    private void jTextFieldEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldEmailActionPerformed
+    private void EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldEmailActionPerformed
+    }//GEN-LAST:event_EmailActionPerformed
 
-    private void jTextFieldTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelefoneActionPerformed
+    private void TelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TelefoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTelefoneActionPerformed
+    }//GEN-LAST:event_TelefoneActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // AÇÃO DO BOTAO SALVAR NO CADASTRO DE PARTICIPANTE
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+        BancoDeDados database = new BancoDeDados();
+        database.configurar_connection("root", "", "porta");
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // AÇÃO DO BOTAO DE ACEITAR OS TERMOS DE SERVIÇO DO CADASTRO DE PARTICIPANTE
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+        if (database.cadastrarParticipante(Nome.getText(),
+                CPF.getText(),
+                Email.getText(),
+                Telefone.getText())) {
 
-    private void jTextFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeActionPerformed
+            JOptionPane.showMessageDialog(null, "Participante cadastrado com sucesso!");
+
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Erro ao cadastrar o participante! Verifique se a entrada não está duplicada");
+
+        }
+
+    }//GEN-LAST:event_SalvarActionPerformed
+
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        dispose();
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void TermosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TermosActionPerformed
+        if (Termos.isEnabled()) {
+            Salvar.setVisible(true);
+        }  
+    }//GEN-LAST:event_TermosActionPerformed
+
+    private void NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldNomeActionPerformed
+    }//GEN-LAST:event_NomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,18 +233,19 @@ public class CadastroParticipante extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JTextField CPF;
+    private javax.swing.JTextField Email;
+    private javax.swing.JTextField Nome;
+    private javax.swing.JButton Sair;
+    private javax.swing.JButton Salvar;
+    private javax.swing.JTextField Telefone;
+    private javax.swing.JCheckBox Termos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField jTextFieldCpf;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldNome;
-    private javax.swing.JTextField jTextFieldTelefone;
+    private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

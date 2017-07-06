@@ -28,13 +28,17 @@ public class DashboardUser extends javax.swing.JFrame {
     private void initComponents() {
 
         jSeparator1 = new javax.swing.JSeparator();
-        jButton1 = new javax.swing.JButton();
+        Termos = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabelPlanodeFundo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuUsuarios = new javax.swing.JMenu();
         jMenuItemUsuarioNovo = new javax.swing.JMenuItem();
         jMenuItemUsuarioExcluir = new javax.swing.JMenuItem();
-        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
         jMenuEventos = new javax.swing.JMenu();
         jMenuItemEventosNovo = new javax.swing.JMenuItem();
         jMenuItemEventosExcluir = new javax.swing.JMenuItem();
@@ -43,36 +47,70 @@ public class DashboardUser extends javax.swing.JFrame {
         jMenuItemCertificadosNovo = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemCertificadosExcluir = new javax.swing.JMenuItem();
-        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        jSeparator5 = new javax.swing.JPopupMenu.Separator();
         jMenuPesquisar = new javax.swing.JMenu();
         jMenuItemPesquisarUsuario = new javax.swing.JMenuItem();
         jMenuItemPesquisarEventos = new javax.swing.JMenuItem();
         jMenuItemPesquisarCertificados = new javax.swing.JMenuItem();
+        jSeparator6 = new javax.swing.JPopupMenu.Separator();
         jMenuAjuda = new javax.swing.JMenu();
         jMenuItemAjudaSobre = new javax.swing.JMenuItem();
         jMenuItemAjudaContatos = new javax.swing.JMenuItem();
-        jSeparator6 = new javax.swing.JPopupMenu.Separator();
-        jSeparator5 = new javax.swing.JPopupMenu.Separator();
-        jMenuItemAjudaSair = new javax.swing.JMenuItem();
+        jSeparator7 = new javax.swing.JPopupMenu.Separator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Acesso Administrador!");
+        setResizable(false);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Termos de Uso ");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Termos.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Termos.setForeground(new java.awt.Color(0, 0, 0));
+        Termos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/report.png"))); // NOI18N
+        Termos.setText("Termos de Uso ");
+        Termos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                TermosActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(670, 400, 120, 40);
+        getContentPane().add(Termos);
+        Termos.setBounds(650, 400, 140, 40);
+
+        Sair.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Sair.setForeground(new java.awt.Color(0, 0, 0));
+        Sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/door_out.png"))); // NOI18N
+        Sair.setText("SAIR");
+        Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SairActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Sair);
+        Sair.setBounds(650, 360, 140, 40);
+
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Certycom - Validando sua Vida");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 300, 290, 60);
+
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("www.portalateral.com");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 350, 240, 40);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(0, 390, 50, 60);
 
         jLabelPlanodeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/bg6a.jpg"))); // NOI18N
         getContentPane().add(jLabelPlanodeFundo);
         jLabelPlanodeFundo.setBounds(0, -20, 800, 470);
 
+        jMenuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_green.png"))); // NOI18N
         jMenuUsuarios.setText("Usuários");
 
+        jMenuItemUsuarioNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItemUsuarioNovo.setText("Criar novo");
         jMenuItemUsuarioNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,6 +119,7 @@ public class DashboardUser extends javax.swing.JFrame {
         });
         jMenuUsuarios.add(jMenuItemUsuarioNovo);
 
+        jMenuItemUsuarioExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_delete.png"))); // NOI18N
         jMenuItemUsuarioExcluir.setText("Excluir");
         jMenuItemUsuarioExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,12 +127,19 @@ public class DashboardUser extends javax.swing.JFrame {
             }
         });
         jMenuUsuarios.add(jMenuItemUsuarioExcluir);
-        jMenuUsuarios.add(jSeparator2);
+        jMenuUsuarios.add(jSeparator4);
 
         jMenuBar1.add(jMenuUsuarios);
 
+        jMenuEventos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calendar_view_day.png"))); // NOI18N
         jMenuEventos.setText("Eventos");
+        jMenuEventos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuEventosActionPerformed(evt);
+            }
+        });
 
+        jMenuItemEventosNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calendar_add.png"))); // NOI18N
         jMenuItemEventosNovo.setText("Criar novo");
         jMenuItemEventosNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +148,7 @@ public class DashboardUser extends javax.swing.JFrame {
         });
         jMenuEventos.add(jMenuItemEventosNovo);
 
+        jMenuItemEventosExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calendar_delete.png"))); // NOI18N
         jMenuItemEventosExcluir.setText("Excluir");
         jMenuItemEventosExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,8 +160,10 @@ public class DashboardUser extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuEventos);
 
+        jMenuCertificados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/page_white_acrobat.png"))); // NOI18N
         jMenuCertificados.setText("Certificados");
 
+        jMenuItemCertificadosNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
         jMenuItemCertificadosNovo.setText("Cadastrar Participante");
         jMenuItemCertificadosNovo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,6 +172,7 @@ public class DashboardUser extends javax.swing.JFrame {
         });
         jMenuCertificados.add(jMenuItemCertificadosNovo);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/page_white_acrobat.png"))); // NOI18N
         jMenuItem1.setText("Emitir CERTIFICADOS");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +181,7 @@ public class DashboardUser extends javax.swing.JFrame {
         });
         jMenuCertificados.add(jMenuItem1);
 
+        jMenuItemCertificadosExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_delete.png"))); // NOI18N
         jMenuItemCertificadosExcluir.setText("Excluir");
         jMenuItemCertificadosExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,23 +189,44 @@ public class DashboardUser extends javax.swing.JFrame {
             }
         });
         jMenuCertificados.add(jMenuItemCertificadosExcluir);
-        jMenuCertificados.add(jSeparator4);
+        jMenuCertificados.add(jSeparator5);
 
         jMenuBar1.add(jMenuCertificados);
 
+        jMenuPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/zoom.png"))); // NOI18N
         jMenuPesquisar.setText("Pesquisar");
 
+        jMenuItemPesquisarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_green.png"))); // NOI18N
         jMenuItemPesquisarUsuario.setText("Usuários");
+        jMenuItemPesquisarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPesquisarUsuarioActionPerformed(evt);
+            }
+        });
         jMenuPesquisar.add(jMenuItemPesquisarUsuario);
 
+        jMenuItemPesquisarEventos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/calendar.png"))); // NOI18N
         jMenuItemPesquisarEventos.setText("Eventos");
+        jMenuItemPesquisarEventos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPesquisarEventosActionPerformed(evt);
+            }
+        });
         jMenuPesquisar.add(jMenuItemPesquisarEventos);
 
+        jMenuItemPesquisarCertificados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/newspaper_link.png"))); // NOI18N
         jMenuItemPesquisarCertificados.setText("Certificados");
+        jMenuItemPesquisarCertificados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPesquisarCertificadosActionPerformed(evt);
+            }
+        });
         jMenuPesquisar.add(jMenuItemPesquisarCertificados);
+        jMenuPesquisar.add(jSeparator6);
 
         jMenuBar1.add(jMenuPesquisar);
 
+        jMenuAjuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/information.png"))); // NOI18N
         jMenuAjuda.setText("Ajuda");
         jMenuAjuda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,6 +234,7 @@ public class DashboardUser extends javax.swing.JFrame {
             }
         });
 
+        jMenuItemAjudaSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exclamation.png"))); // NOI18N
         jMenuItemAjudaSobre.setText("Sobre");
         jMenuItemAjudaSobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,6 +243,7 @@ public class DashboardUser extends javax.swing.JFrame {
         });
         jMenuAjuda.add(jMenuItemAjudaSobre);
 
+        jMenuItemAjudaContatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/telephone.png"))); // NOI18N
         jMenuItemAjudaContatos.setText("Contatos");
         jMenuItemAjudaContatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,16 +251,7 @@ public class DashboardUser extends javax.swing.JFrame {
             }
         });
         jMenuAjuda.add(jMenuItemAjudaContatos);
-        jMenuAjuda.add(jSeparator6);
-        jMenuAjuda.add(jSeparator5);
-
-        jMenuItemAjudaSair.setText("Sair");
-        jMenuItemAjudaSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemAjudaSairActionPerformed(evt);
-            }
-        });
-        jMenuAjuda.add(jMenuItemAjudaSair);
+        jMenuAjuda.add(jSeparator7);
 
         jMenuBar1.add(jMenuAjuda);
 
@@ -196,31 +261,10 @@ public class DashboardUser extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItemAjudaSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjudaSairActionPerformed
-        TelaPrincipal sair = new TelaPrincipal();
-        sair.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jMenuItemAjudaSairActionPerformed
-
     private void jMenuItemUsuarioNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsuarioNovoActionPerformed
-     CadastroUsuario novo = new CadastroUsuario();
-     novo.setVisible(true);
+        CadastroUsuario novo = new CadastroUsuario();
+        novo.setVisible(true);
     }//GEN-LAST:event_jMenuItemUsuarioNovoActionPerformed
-
-    private void jMenuItemAjudaSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjudaSobreActionPerformed
-        Versao sobre = new Versao();
-        sobre.setVisible(true);
-    }//GEN-LAST:event_jMenuItemAjudaSobreActionPerformed
-
-    private void jMenuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAjudaActionPerformed
-
-
-    }//GEN-LAST:event_jMenuAjudaActionPerformed
-
-    private void jMenuItemAjudaContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjudaContatosActionPerformed
-    Contatos contato = new Contatos();
-    contato.setVisible(true);
-    }//GEN-LAST:event_jMenuItemAjudaContatosActionPerformed
 
     private void jMenuItemCertificadosNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCertificadosNovoActionPerformed
         CadastroParticipante novo = new CadastroParticipante();
@@ -228,30 +272,73 @@ public class DashboardUser extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemCertificadosNovoActionPerformed
 
     private void jMenuItemUsuarioExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemUsuarioExcluirActionPerformed
-        // Excluir usuario ...
+        ExcluirUsuario Excluir = new ExcluirUsuario();
+        Excluir.setVisible(true);
     }//GEN-LAST:event_jMenuItemUsuarioExcluirActionPerformed
 
     private void jMenuItemEventosExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEventosExcluirActionPerformed
-        // Excluir eventos .....  
+        ExcluirEvento Excluir = new ExcluirEvento();
+        Excluir.setVisible(true);
     }//GEN-LAST:event_jMenuItemEventosExcluirActionPerformed
 
     private void jMenuItemEventosNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEventosNovoActionPerformed
-    CadastroEventos eventos = new CadastroEventos();
-    eventos.setVisible(true);
+        CadastrarEvento eventos = new CadastrarEvento();
+        eventos.setVisible(true);
     }//GEN-LAST:event_jMenuItemEventosNovoActionPerformed
 
     private void jMenuItemCertificadosExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCertificadosExcluirActionPerformed
-       // Excuir participante ha receber certificado
+        ExcluirParticipante Excluir = new ExcluirParticipante();
+        Excluir.setVisible(true);
     }//GEN-LAST:event_jMenuItemCertificadosExcluirActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // Emitir certificados aqui
+        EmitirCertificados Emitir = new EmitirCertificados();
+        Emitir.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void TermosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TermosActionPerformed
         Termos t = new Termos();
         t.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_TermosActionPerformed
+
+    private void jMenuItemPesquisarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPesquisarUsuarioActionPerformed
+        PesquisarUsuarios Pesquisar = new PesquisarUsuarios();
+        Pesquisar.setVisible(true);
+    }//GEN-LAST:event_jMenuItemPesquisarUsuarioActionPerformed
+
+    private void jMenuItemPesquisarEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPesquisarEventosActionPerformed
+        PesquisarEventos Pesquisar = new PesquisarEventos();
+        Pesquisar.setVisible(true);
+    }//GEN-LAST:event_jMenuItemPesquisarEventosActionPerformed
+
+    private void jMenuItemPesquisarCertificadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPesquisarCertificadosActionPerformed
+        PesquisarCertificados Pesquisar = new PesquisarCertificados();
+        Pesquisar.setVisible(true);
+    }//GEN-LAST:event_jMenuItemPesquisarCertificadosActionPerformed
+
+    private void jMenuAjudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAjudaActionPerformed
+
+    }//GEN-LAST:event_jMenuAjudaActionPerformed
+
+    private void jMenuItemAjudaContatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjudaContatosActionPerformed
+        Contatos contato = new Contatos();
+        contato.setVisible(true);
+    }//GEN-LAST:event_jMenuItemAjudaContatosActionPerformed
+
+    private void jMenuItemAjudaSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAjudaSobreActionPerformed
+        Versao sobre = new Versao();
+        sobre.setVisible(true);
+    }//GEN-LAST:event_jMenuItemAjudaSobreActionPerformed
+
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        TelaPrincipal tela = new TelaPrincipal();
+        tela.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void jMenuEventosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuEventosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuEventosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -289,7 +376,11 @@ public class DashboardUser extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Sair;
+    private javax.swing.JButton Termos;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabelPlanodeFundo;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
@@ -297,7 +388,6 @@ public class DashboardUser extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuEventos;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemAjudaContatos;
-    private javax.swing.JMenuItem jMenuItemAjudaSair;
     private javax.swing.JMenuItem jMenuItemAjudaSobre;
     private javax.swing.JMenuItem jMenuItemCertificadosExcluir;
     private javax.swing.JMenuItem jMenuItemCertificadosNovo;
@@ -311,10 +401,10 @@ public class DashboardUser extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuPesquisar;
     private javax.swing.JMenu jMenuUsuarios;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JPopupMenu.Separator jSeparator5;
     private javax.swing.JPopupMenu.Separator jSeparator6;
+    private javax.swing.JPopupMenu.Separator jSeparator7;
     // End of variables declaration//GEN-END:variables
 }

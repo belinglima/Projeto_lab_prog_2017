@@ -5,8 +5,7 @@
  */
 package visao;
 
-import java.util.HashSet;
-import visao.Telalogin;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -30,109 +29,120 @@ public class CadastroUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonSalvar = new javax.swing.JButton();
-        jButtonVoltar = new javax.swing.JButton();
+        Salvar = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
         jLabelUsuario = new javax.swing.JLabel();
-        jTextFieldUsuario = new javax.swing.JTextField();
+        Usuario = new javax.swing.JTextField();
         jLabelNomeRazão = new javax.swing.JLabel();
-        jTextFieldNomeRazão = new javax.swing.JTextField();
+        NomeRazao = new javax.swing.JTextField();
         jLabelCpfCnpj = new javax.swing.JLabel();
-        jTextFieldCPFcnpj = new javax.swing.JTextField();
+        CPFCNPJ = new javax.swing.JTextField();
         jLabelEmail = new javax.swing.JLabel();
-        jTextFieldEmail = new javax.swing.JTextField();
+        Email = new javax.swing.JTextField();
         jLabelConfirmarEmail = new javax.swing.JLabel();
-        jTextFieldConfirmarEmail = new javax.swing.JTextField();
+        ConfirmarEMail = new javax.swing.JTextField();
         jLabelSenha = new javax.swing.JLabel();
-        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        Senha = new javax.swing.JPasswordField();
         jLabelConfirmarSenha = new javax.swing.JLabel();
-        jPasswordFieldConfirmarSenha = new javax.swing.JPasswordField();
-        jCheckBoxTermosdeUso = new javax.swing.JCheckBox();
+        ConfirmarSenha = new javax.swing.JPasswordField();
+        Termos = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
         jLabelPlanodeFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButtonSalvar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButtonSalvar.setText("SALVAR");
-        getContentPane().add(jButtonSalvar);
-        jButtonSalvar.setBounds(110, 420, 120, 40);
-
-        jButtonVoltar.setFont(new java.awt.Font("Dialog", 3, 11)); // NOI18N
-        jButtonVoltar.setText("SAIR");
-        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+        Salvar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Salvar.setText("SALVAR");
+        Salvar.setVisible(false);
+        Salvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVoltarActionPerformed(evt);
+                SalvarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonVoltar);
-        jButtonVoltar.setBounds(240, 420, 120, 40);
+        getContentPane().add(Salvar);
+        Salvar.setBounds(110, 420, 120, 40);
+
+        Sair.setFont(new java.awt.Font("Dialog", 3, 11)); // NOI18N
+        Sair.setText("SAIR");
+        Sair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SairActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Sair);
+        Sair.setBounds(240, 420, 120, 40);
 
         jLabelUsuario.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLabelUsuario.setText("Usuário");
         getContentPane().add(jLabelUsuario);
         jLabelUsuario.setBounds(210, 30, 50, 14);
-        getContentPane().add(jTextFieldUsuario);
-        jTextFieldUsuario.setBounds(120, 50, 230, 30);
+        getContentPane().add(Usuario);
+        Usuario.setBounds(120, 50, 230, 30);
 
         jLabelNomeRazão.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelNomeRazão.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNomeRazão.setText("Nome / Razão Social");
         getContentPane().add(jLabelNomeRazão);
         jLabelNomeRazão.setBounds(180, 80, 120, 14);
-        getContentPane().add(jTextFieldNomeRazão);
-        jTextFieldNomeRazão.setBounds(120, 100, 230, 30);
+        getContentPane().add(NomeRazao);
+        NomeRazao.setBounds(120, 100, 230, 30);
 
         jLabelCpfCnpj.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelCpfCnpj.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCpfCnpj.setText("CPF / CNPJ");
         getContentPane().add(jLabelCpfCnpj);
         jLabelCpfCnpj.setBounds(210, 130, 70, 15);
-        getContentPane().add(jTextFieldCPFcnpj);
-        jTextFieldCPFcnpj.setBounds(120, 150, 230, 30);
+        getContentPane().add(CPFCNPJ);
+        CPFCNPJ.setBounds(120, 150, 230, 30);
 
         jLabelEmail.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelEmail.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEmail.setText("E-mail");
         getContentPane().add(jLabelEmail);
         jLabelEmail.setBounds(220, 180, 40, 15);
-        getContentPane().add(jTextFieldEmail);
-        jTextFieldEmail.setBounds(120, 200, 230, 30);
+        getContentPane().add(Email);
+        Email.setBounds(120, 200, 230, 30);
 
         jLabelConfirmarEmail.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelConfirmarEmail.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConfirmarEmail.setText("Confirmar E-mail");
         getContentPane().add(jLabelConfirmarEmail);
         jLabelConfirmarEmail.setBounds(190, 230, 100, 14);
-        getContentPane().add(jTextFieldConfirmarEmail);
-        jTextFieldConfirmarEmail.setBounds(120, 250, 230, 30);
+        getContentPane().add(ConfirmarEMail);
+        ConfirmarEMail.setBounds(120, 250, 230, 30);
 
         jLabelSenha.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSenha.setText("Senha");
         getContentPane().add(jLabelSenha);
         jLabelSenha.setBounds(220, 280, 40, 15);
-        getContentPane().add(jPasswordFieldSenha);
-        jPasswordFieldSenha.setBounds(120, 300, 230, 30);
+        getContentPane().add(Senha);
+        Senha.setBounds(120, 300, 230, 30);
 
         jLabelConfirmarSenha.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelConfirmarSenha.setForeground(new java.awt.Color(255, 255, 255));
         jLabelConfirmarSenha.setText("Confirmar Senha");
         getContentPane().add(jLabelConfirmarSenha);
         jLabelConfirmarSenha.setBounds(180, 331, 100, 14);
-        getContentPane().add(jPasswordFieldConfirmarSenha);
-        jPasswordFieldConfirmarSenha.setBounds(120, 350, 230, 30);
+        getContentPane().add(ConfirmarSenha);
+        ConfirmarSenha.setBounds(120, 350, 230, 30);
 
-        jCheckBoxTermosdeUso.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jCheckBoxTermosdeUso.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxTermosdeUso.setText("Aceito os termos de uso e privacidade.");
-        jCheckBoxTermosdeUso.addActionListener(new java.awt.event.ActionListener() {
+        Termos.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Termos.setForeground(new java.awt.Color(255, 255, 255));
+        Termos.setText("Aceito os termos de uso e privacidade.");
+        Termos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBoxTermosdeUsoActionPerformed(evt);
+                TermosActionPerformed(evt);
             }
         });
-        getContentPane().add(jCheckBoxTermosdeUso);
-        jCheckBoxTermosdeUso.setBounds(110, 390, 250, 22);
+        getContentPane().add(Termos);
+        Termos.setBounds(110, 390, 250, 22);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(410, 430, 50, 60);
 
         jLabelPlanodeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabelPlanodeFundo);
@@ -142,14 +152,58 @@ public class CadastroUsuario extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
-    dispose();
-        
-    }//GEN-LAST:event_jButtonVoltarActionPerformed
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
+        dispose();
 
-    private void jCheckBoxTermosdeUsoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxTermosdeUsoActionPerformed
-       // Acao do checkbox que confirma aceite dos termmos de uso do sistema
-    }//GEN-LAST:event_jCheckBoxTermosdeUsoActionPerformed
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void TermosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TermosActionPerformed
+
+        if (Termos.isEnabled()) {
+            Salvar.setVisible(true);
+        }
+    }//GEN-LAST:event_TermosActionPerformed
+
+    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
+        BancoDeDados database = new BancoDeDados();
+        database.configurar_connection("root", "", "porta");
+
+        if (!(Senha.getText().equals(ConfirmarSenha.getText()))) {
+
+            JOptionPane.showMessageDialog(null, "as senhas não coincidem");
+
+        } else {
+
+            if (!(Email.getText().equals(Email.getText()))) {
+
+                JOptionPane.showMessageDialog(null, "os e-mails coincidem");
+
+            } else {
+
+                if (!database.usuarioExiste(Usuario.getText())) {
+
+                    if (database.usuarioCadastrar(NomeRazao.getText(),Usuario.getText(),
+                            Senha.getText(),Email.getText(),CPFCNPJ.getText())) {
+
+                        JOptionPane.showMessageDialog(null, "usuario cadastrado com sucesso!");
+                        dispose();
+
+                    } else {
+
+                        JOptionPane.showMessageDialog(null, "erro ao cadastrar");
+
+                    }
+
+                } else {
+
+                    JOptionPane.showMessageDialog(null, "Usuário já cadastrada");
+
+                }
+
+            }
+
+        }
+    }//GEN-LAST:event_SalvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,9 +242,17 @@ public class CadastroUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonSalvar;
-    private javax.swing.JButton jButtonVoltar;
-    private javax.swing.JCheckBox jCheckBoxTermosdeUso;
+    private javax.swing.JTextField CPFCNPJ;
+    private javax.swing.JTextField ConfirmarEMail;
+    private javax.swing.JPasswordField ConfirmarSenha;
+    private javax.swing.JTextField Email;
+    private javax.swing.JTextField NomeRazao;
+    private javax.swing.JButton Sair;
+    private javax.swing.JButton Salvar;
+    private javax.swing.JPasswordField Senha;
+    private javax.swing.JCheckBox Termos;
+    private javax.swing.JTextField Usuario;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelConfirmarEmail;
     private javax.swing.JLabel jLabelConfirmarSenha;
     private javax.swing.JLabel jLabelCpfCnpj;
@@ -199,12 +261,5 @@ public class CadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelPlanodeFundo;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JPasswordField jPasswordFieldConfirmarSenha;
-    private javax.swing.JPasswordField jPasswordFieldSenha;
-    private javax.swing.JTextField jTextFieldCPFcnpj;
-    private javax.swing.JTextField jTextFieldConfirmarEmail;
-    private javax.swing.JTextField jTextFieldEmail;
-    private javax.swing.JTextField jTextFieldNomeRazão;
-    private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }

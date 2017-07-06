@@ -28,23 +28,33 @@ public class Planos extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
         jButton1.setText("jButton1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton2.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButton2.setText("Voltar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Voltar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Voltar.setText("Voltar");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                VoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2);
-        jButton2.setBounds(140, 420, 190, 30);
+        getContentPane().add(Voltar);
+        Voltar.setBounds(140, 440, 190, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/1img.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(20, 40, 430, 350);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(410, 430, 50, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -54,11 +64,11 @@ public class Planos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         TelaPrincipal tela = new TelaPrincipal();
         tela.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,8 +106,10 @@ public class Planos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Voltar;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }

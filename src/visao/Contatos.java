@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package visao;
+
 /**
  *
  * @author Raul Xavier
@@ -30,88 +31,136 @@ public class Contatos extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Sair = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        SitePorta = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("              CONTATOS");
+        jLabel2.setText(" CONTATOS");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 75, 150, 20);
+        jLabel2.setBounds(160, 20, 130, 50);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Frederico Schmitt Kremer");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(140, 110, 190, 14);
+        jLabel3.setBounds(70, 80, 190, 17);
 
-        jLabel4.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Marciel Eduardo Bento Becker");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(140, 130, 190, 14);
+        jLabel4.setBounds(40, 150, 210, 17);
 
-        jLabel5.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Miguel Maciel Da Silva");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(140, 150, 180, 14);
+        jLabel5.setBounds(100, 200, 160, 17);
 
-        jLabel6.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Raul De Oliveira Xavier");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(140, 170, 180, 14);
-
-        jLabel7.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Salomão Beling Lima");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(140, 190, 190, 20);
+        jLabel7.setBounds(100, 100, 150, 20);
 
-        jLabel8.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Lucas Gimenes Maia");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(140, 220, 200, 14);
+        jLabel8.setBounds(110, 230, 150, 17);
 
-        jLabel9.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("contato@portalateral.com");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(140, 280, 190, 14);
+        jLabel9.setBounds(150, 280, 190, 14);
 
-        jButton1.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("SAIR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Sair.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Sair.setForeground(new java.awt.Color(0, 0, 0));
+        Sair.setText("SAIR");
+        Sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                SairActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(190, 410, 90, 24);
+        getContentPane().add(Sair);
+        Sair.setBounds(360, 390, 110, 30);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("whats:51996706331");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(140, 300, 180, 14);
+        jLabel10.setBounds(170, 300, 140, 17);
 
-        jLabel11.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Facebook");
+        jLabel13.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Adm de dados");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(290, 230, 110, 17);
+
+        jLabel14.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Adm back e front end");
+        getContentPane().add(jLabel14);
+        jLabel14.setBounds(280, 80, 160, 17);
+
+        jLabel15.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Adm de projetos");
+        getContentPane().add(jLabel15);
+        jLabel15.setBounds(280, 150, 120, 15);
+
+        jLabel16.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("Adm de dados");
+        getContentPane().add(jLabel16);
+        jLabel16.setBounds(290, 200, 110, 17);
+
+        jLabel17.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Adm back e front end");
+        getContentPane().add(jLabel17);
+        jLabel17.setBounds(280, 110, 160, 17);
+        getContentPane().add(jSeparator1);
+        jSeparator1.setBounds(0, 420, 480, 20);
+
+        SitePorta.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        SitePorta.setForeground(new java.awt.Color(0, 0, 0));
+        SitePorta.setText("Porta Lateral");
+        SitePorta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SitePortaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SitePorta);
+        SitePorta.setBounds(10, 390, 110, 30);
+
+        jLabel6.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Facebook:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, 370, 120, 17);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(140, 320, 150, 14);
+        jLabel11.setBounds(410, 430, 50, 60);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -121,9 +170,15 @@ public class Contatos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairActionPerformed
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_SairActionPerformed
+
+    private void SitePortaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SitePortaActionPerformed
+        SitePorta site = new SitePorta();
+        site.setVisible(true);
+
+    }//GEN-LAST:event_SitePortaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,10 +216,16 @@ public class Contatos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Sair;
+    private javax.swing.JButton SitePorta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -173,5 +234,6 @@ public class Contatos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

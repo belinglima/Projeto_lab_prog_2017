@@ -34,6 +34,8 @@ public class Versao extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        setTitle("Versão do Sistema");
+
         jLabelVersão.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelVersão.setText("Versão                                                                                                v1.0.1");
 

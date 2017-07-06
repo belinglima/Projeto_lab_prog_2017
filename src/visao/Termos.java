@@ -30,8 +30,8 @@ public class Termos extends javax.swing.JFrame {
         jSplitPane1 = new javax.swing.JSplitPane();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaTermos = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        Termos = new javax.swing.JTextArea();
+        Fechar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -41,25 +41,28 @@ public class Termos extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Termos de Utilização do sistema");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(20, 70, 370, 50);
+        jLabel2.setBounds(20, 90, 370, 50);
 
-        jTextAreaTermos.setEditable(false);
-        jTextAreaTermos.setColumns(20);
-        jTextAreaTermos.setRows(5);
-        jTextAreaTermos.setText("Prezado Cliente,\nAo aceitar os termos de uso do sistema de horas complementares,\nVocê esta comcordando que qualquer alteração do sistema será \nmediante pagamento e Previo Agendamento com nossa equipe. \nA Equipe CERTYCOM não se responsabilisa por emições invalidas\n de certificados, Para que possamos disponibilizar a Emissão de \ncertificados Favor entrar em contato, \n\nConosco - Telefone e email Disponivel no ' menu ' Ajuda > Contato.\n\nCaso deseje ter mais de um acesso ao sistema entre em contato conosco.\nObrigado,\nEquipe CERTYCOM. \nwww.portalateral.com");
-        jScrollPane1.setViewportView(jTextAreaTermos);
+        Termos.setEditable(false);
+        Termos.setColumns(20);
+        Termos.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Termos.setRows(5);
+        Termos.setText("Prezado Cliente,\nAo aceitar os termos de uso do sistema de horas complementares,\nvocê esta comcordando que qualquer alteração do sistema será, \nmediante pagamento e prévio agendamento com nossa equipe.\n \nA Equipe CERTYCOM não se responsabiliza por emissões invalidas\nde certificados.\n\nPara que possamos disponibilizar a Emissão de certificados. \nFavor entrar em contato, Atravez;\nTelefone e email Disponivel no ' menu ' Ajuda > Contato.\n\nCaso deseje ter mais de um acesso ao sistema entre em contato conosco.\nObrigado,\nEquipe CERTYCOM. \nwww.portalateral.com");
+        jScrollPane1.setViewportView(Termos);
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(20, 130, 440, 250);
 
-        jButton1.setText("Fechar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Fechar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Fechar.setForeground(new java.awt.Color(0, 0, 0));
+        Fechar.setText("Fechar");
+        Fechar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                FecharActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(380, 20, 80, 25);
+        getContentPane().add(Fechar);
+        Fechar.setBounds(380, 20, 80, 24);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -69,9 +72,9 @@ public class Termos extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void FecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FecharActionPerformed
      dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_FecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -110,11 +113,11 @@ public class Termos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Fechar;
+    private javax.swing.JTextArea Termos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JTextArea jTextAreaTermos;
     // End of variables declaration//GEN-END:variables
 }

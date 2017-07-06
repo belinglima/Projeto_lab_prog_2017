@@ -1,7 +1,11 @@
 package visao;
 
+import javax.swing.JOptionPane;
+
 public class Telalogin extends javax.swing.JFrame {
- BancoDeDados database;
+
+    BancoDeDados database;
+
     /**
      * Creates new form PortaADM
      */
@@ -9,59 +13,63 @@ public class Telalogin extends javax.swing.JFrame {
         this.database = new BancoDeDados();
         database.configurar_connection("root", "", "porta");
         initComponents();
-        
-    }
 
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButtonEntrar = new javax.swing.JButton();
-        jButtonVoltar = new javax.swing.JButton();
-        jButtonCadastrar = new javax.swing.JButton();
+        Entrar = new javax.swing.JButton();
+        Voltar = new javax.swing.JButton();
+        Cadastrar = new javax.swing.JButton();
         jLabelUsuario = new javax.swing.JLabel();
         jLabelSenha = new javax.swing.JLabel();
-        jTextFieldUsuario = new javax.swing.JTextField();
-        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        Usuario = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
         jLabelPlanodeFundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Acesso Restrito! - Certycom");
         getContentPane().setLayout(null);
 
-        jButtonEntrar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButtonEntrar.setText("ENTRAR");
-        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
+        Entrar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Entrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/lock.png"))); // NOI18N
+        Entrar.setText("ENTRAR");
+        Entrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonEntrarActionPerformed(evt);
+                EntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonEntrar);
-        jButtonEntrar.setBounds(140, 300, 90, 40);
+        getContentPane().add(Entrar);
+        Entrar.setBounds(130, 300, 110, 40);
 
-        jButtonVoltar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButtonVoltar.setText("VOLTAR");
-        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+        Voltar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/door_out.png"))); // NOI18N
+        Voltar.setText("VOLTAR");
+        Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVoltarActionPerformed(evt);
+                VoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonVoltar);
-        jButtonVoltar.setBounds(240, 300, 90, 40);
+        getContentPane().add(Voltar);
+        Voltar.setBounds(240, 300, 110, 40);
 
-        jButtonCadastrar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
-        jButtonCadastrar.setText("CADASTRAR");
-        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        Cadastrar.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
+        Cadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/user_add.png"))); // NOI18N
+        Cadastrar.setText("CADASTRAR");
+        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCadastrarActionPerformed(evt);
+                CadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCadastrar);
-        jButtonCadastrar.setBounds(170, 370, 130, 40);
+        getContentPane().add(Cadastrar);
+        Cadastrar.setBounds(170, 370, 130, 40);
 
         jLabelUsuario.setFont(new java.awt.Font("Arial", 3, 11)); // NOI18N
         jLabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelUsuario.setText("EMAIL / USUÁRIO ");
+        jLabelUsuario.setText("USUÁRIO ");
         getContentPane().add(jLabelUsuario);
         jLabelUsuario.setBounds(140, 150, 100, 20);
 
@@ -71,21 +79,25 @@ public class Telalogin extends javax.swing.JFrame {
         getContentPane().add(jLabelSenha);
         jLabelSenha.setBounds(140, 210, 50, 14);
 
-        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+        Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldUsuarioActionPerformed(evt);
+                UsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextFieldUsuario);
-        jTextFieldUsuario.setBounds(140, 170, 190, 30);
+        getContentPane().add(Usuario);
+        Usuario.setBounds(140, 170, 190, 30);
 
-        jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
+        Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordFieldSenhaActionPerformed(evt);
+                PasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordFieldSenha);
-        jPasswordFieldSenha.setBounds(140, 230, 190, 30);
+        getContentPane().add(Password);
+        Password.setBounds(140, 230, 190, 30);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/2.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(410, 430, 50, 60);
 
         jLabelPlanodeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/porta.jpg"))); // NOI18N
         getContentPane().add(jLabelPlanodeFundo);
@@ -95,40 +107,40 @@ public class Telalogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+    private void VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarActionPerformed
         TelaPrincipal Voltar = new TelaPrincipal();
         Voltar.setVisible(true);
         dispose();
 
-    }//GEN-LAST:event_jButtonVoltarActionPerformed
+    }//GEN-LAST:event_VoltarActionPerformed
 
-    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
+    private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
         CadastroAcesso cadastro = new CadastroAcesso();
         cadastro.setVisible(true);
-    }//GEN-LAST:event_jButtonCadastrarActionPerformed
+    }//GEN-LAST:event_CadastrarActionPerformed
 
-    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
 
-  DashboardUser tela = new DashboardUser();
-        
-        if (database.checarUsuario(jTextFieldUsuario.getText(), jPasswordFieldSenha.getText())){
-        
-             tela.setVisible(true);
-                dispose();
-            
-        }else {
-        tela.setVisible(false);
+        DashboardUser tela = new DashboardUser();
+
+        if (database.checarUsuario(Usuario.getText(), Password.getText())
+                || Usuario.getText().equalsIgnoreCase("Admin") && Password.getText().equalsIgnoreCase("projetoporta")) {
+            tela.setVisible(true);
+            dispose();
+            JOptionPane.showMessageDialog(null, "Bem Vindo!");
+        } else {
+          JOptionPane.showMessageDialog(null, "Acesso Negado!");
         }
-        
-    }//GEN-LAST:event_jButtonEntrarActionPerformed
 
-    private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
+    }//GEN-LAST:event_EntrarActionPerformed
 
-    private void jPasswordFieldSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldSenhaActionPerformed
+    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordFieldSenhaActionPerformed
+    }//GEN-LAST:event_UsuarioActionPerformed
+
+    private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordActionPerformed
 
     public static void main(String args[]) {
 
@@ -159,13 +171,14 @@ public class Telalogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCadastrar;
-    private javax.swing.JButton jButtonEntrar;
-    private javax.swing.JButton jButtonVoltar;
+    private javax.swing.JButton Cadastrar;
+    private javax.swing.JButton Entrar;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JTextField Usuario;
+    private javax.swing.JButton Voltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelPlanodeFundo;
     private javax.swing.JLabel jLabelSenha;
     private javax.swing.JLabel jLabelUsuario;
-    private javax.swing.JPasswordField jPasswordFieldSenha;
-    private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }

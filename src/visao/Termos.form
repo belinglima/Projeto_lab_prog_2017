@@ -44,7 +44,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="20" y="70" width="370" height="50"/>
+          <AbsoluteConstraints x="20" y="90" width="370" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -60,22 +60,31 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextAreaTermos">
+        <Component class="javax.swing.JTextArea" name="Termos">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
             <Property name="columns" type="int" value="20"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Arial" size="11" style="3"/>
+            </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Prezado Cliente,&#xa;Ao aceitar os termos de uso do sistema de horas complementares,&#xa;Voc&#xea; esta comcordando que qualquer altera&#xe7;&#xe3;o do sistema ser&#xe1; &#xa;mediante pagamento e Previo Agendamento com nossa equipe. &#xa;A Equipe CERTYCOM n&#xe3;o se responsabilisa por emi&#xe7;&#xf5;es invalidas&#xa; de certificados, Para que possamos disponibilizar a Emiss&#xe3;o de &#xa;certificados Favor entrar em contato, &#xa;&#xa;Conosco - Telefone e email Disponivel no &apos; menu &apos; Ajuda &gt; Contato.&#xa;&#xa;Caso deseje ter mais de um acesso ao sistema entre em contato conosco.&#xa;Obrigado,&#xa;Equipe CERTYCOM. &#xa;www.portalateral.com"/>
+            <Property name="text" type="java.lang.String" value="Prezado Cliente,&#xa;Ao aceitar os termos de uso do sistema de horas complementares,&#xa;voc&#xea; esta comcordando que qualquer altera&#xe7;&#xe3;o do sistema ser&#xe1;, &#xa;mediante pagamento e pr&#xe9;vio agendamento com nossa equipe.&#xa; &#xa;A Equipe CERTYCOM n&#xe3;o se responsabiliza por emiss&#xf5;es invalidas&#xa;de certificados.&#xa;&#xa;Para que possamos disponibilizar a Emiss&#xe3;o de certificados. &#xa;Favor entrar em contato, Atravez;&#xa;Telefone e email Disponivel no &apos; menu &apos; Ajuda &gt; Contato.&#xa;&#xa;Caso deseje ter mais de um acesso ao sistema entre em contato conosco.&#xa;Obrigado,&#xa;Equipe CERTYCOM. &#xa;www.portalateral.com"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="Fechar">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Arial" size="11" style="3"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="0" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Fechar"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FecharActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
